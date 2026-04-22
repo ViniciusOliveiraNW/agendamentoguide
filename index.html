@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jadi Hub — Informativos do Sistema</title>
+  <title>Agendamento — Informativos do Sistema</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -20,9 +20,9 @@
   </button>
 
   <div class="logo">
-    <div class="logo-mark">JH</div>
+    <div class="logo-mark">AG</div>
     <div class="logo-text">
-      <span style="display:block;font-weight:700;font-size:.9rem;color:var(--text-heading)">Jadi Hub</span>
+      <span style="display:block;font-weight:700;font-size:.9rem;color:var(--text-heading)">Agendamento</span>
       <span class="logo-sub">Informativos</span>
     </div>
   </div>
@@ -61,7 +61,7 @@
       <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
       <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
     </svg>
-    Geral (Tela Inicial)
+    Geral(Tela Inicial)
   </div>
 
   <div class="nav-sub">
@@ -130,8 +130,8 @@
 
     <div class="section-hero">
       <div class="hero-tag">Tela Inicial</div>
-      <h1>Geral — Visão Geral do Sistema</h1>
-      <p>A tela Home apresenta um panorama completo dos agendamentos, com indicadores em tempo real, filtros avançados e múltiplos modos de visualização para análise rápida e ações diretas.</p>
+      <h1>Geral — A tela inicial do sistema</h1>
+      <p>A tela "Geral" apresenta um panorama completo dos agendamentos, com indicadores em tempo real, filtros avançados e múltiplos modos de visualização para análise rápida e ações diretas.</p>
     </div>
 
     <!-- ─── FILTROS ──────────────────────────── -->
@@ -149,7 +149,7 @@
         Filtros
       </h2>
 
-      <p>É possível aplicar filtros para visualizar dados específicos. Ao aplicar qualquer filtro, os indicadores de desempenho são atualizados automaticamente.</p>
+      <p>Podemos aplicar filtros para visualizar dados específicos. Ao aplicar qualquer filtro, os indicadores de desempenho são atualizados automaticamente.</p>
 
       <div class="section-subtitle">Tipos de filtro disponíveis</div>
       <div class="filter-list">
@@ -196,7 +196,6 @@
       </div>
 
       <div class="callout callout-info">
-        <span class="callout-icon">👉</span>
         <span>Ao aplicar filtros, os <strong>indicadores de desempenho são atualizados automaticamente</strong>, refletindo apenas os dados do período e critérios selecionados.</span>
       </div>
     </div>
@@ -216,7 +215,51 @@
         Indicadores de Desempenho
       </h2>
 
-      <p>Os indicadores mostram a quantidade de agendamentos conforme os filtros aplicados, permitindo uma visão rápida do status geral.</p>
+      <p>Os indicadores mostram a quantidade de agendamentos conforme os filtros aplicados:</p>
+
+      <ul class="info-list">
+        <li>
+          <span class="info-list-icon">📊</span>
+          <span><strong>Total</strong> — A soma de agendamentos em: Sala de espera, Pendentes, Agendados, Concluídas e Canceladas</span>
+        </li>
+        <li>
+          <span class="info-list-icon">⏳</span>
+          <span><strong>Sala de espera</strong> — Clientes que optaram por esperar o horário ficar vago</span>
+        </li>
+        <li>
+          <span class="info-list-icon">⏱️</span>
+          <span><strong>Pendentes</strong> — Agendamentos aguardando aprovação</span>
+        </li>
+        <li>
+          <span class="info-list-icon">✅</span>
+          <span><strong>Agendados</strong> — Agendamentos já confirmados</span>
+        </li>
+        <li>
+          <span class="info-list-icon">🎯</span>
+          <span><strong>Concluídos</strong> — Agendamento concluído com sucesso</span>
+        </li>
+        <li>
+          <span class="info-list-icon">❌</span>
+          <span><strong>Cancelados</strong> — Tarefas que não puderam ser realizadas</span>
+        </li>
+      </ul>
+
+      <div class="section-subtitle">Informações adicionais</div>
+
+      <ul class="info-list">
+        <li>
+          <span class="info-list-icon">📈</span>
+          <span><strong>Taxa de confirmação</strong> — Porcentagem baseada em agendamentos <strong>sala de espera</strong> e <strong>concluídos</strong> sobre o total</span>
+        </li>
+        <li>
+          <span class="info-list-icon">📋</span>
+          <span><strong>Status geral</strong> — Gráficos de porcentagem de cada categoria</span>
+        </li>
+        <li>
+          <span class="info-list-icon">🏆</span>
+          <span><strong>Atividades mais populares</strong> — Qual serviço é agendado com uma maior recorrência</span>
+        </li>
+      </ul>
 
       <div class="section-subtitle">Contadores de status</div>
       <div class="indicator-grid">
