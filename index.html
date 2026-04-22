@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadi Hub — Informativos do Sistema</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Sidebar Overlay -->
+<div id="sidebar-overlay"></div>
+
+<!-- ─── HEADER ──────────────────────────────────────────── -->
+<header id="header">
+  <button id="hamburger" title="Menu" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="logo">
+    <div class="logo-mark">JH</div>
+    <div class="logo-text">
+      <span style="display:block;font-weight:700;font-size:.9rem;color:var(--text-heading)">Jadi Hub</span>
+      <span class="logo-sub">Informativos</span>
+    </div>
+  </div>
+
+  <div class="search-wrap">
+    <svg class="icon-search" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+    </svg>
+    <input type="text" id="search-input" placeholder="Buscar… (Ctrl+K)">
+    <button id="search-clear" title="Limpar">×</button>
+  </div>
+
+  <button id="theme-toggle" title="Alternar tema">
+    <!-- Sol -->
+    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="5"/>
+      <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+    <!-- Lua -->
+    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
+</header>
+
+<!-- ─── SIDEBAR ─────────────────────────────────────────── -->
+<nav id="sidebar">
+
+  <div class="nav-group-label">Sistema</div>
+
+  <div class="nav-item active" data-section="s-geral">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+      <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+    </svg>
+    Geral (Tela Inicial)
+  </div>
+
+  <div class="nav-sub">
+    <div class="nav-item" data-section="s-geral" data-sub="filtros">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+      </svg>
+      Filtros
+    </div>
+    <div class="nav-item" data-section="s-geral" data-sub="indicadores">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+      </svg>
+      Indicadores
+    </div>
+    <div class="nav-item" data-section="s-geral" data-sub="modos">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+      </svg>
+      Modos de Visualização
+    </div>
+  </div>
+
+  <div class="nav-divider"></div>
+  <div class="nav-group-label">Em breve</div>
+
+  <div class="nav-item" style="opacity:.45; cursor:default;">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+      <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+    </svg>
+    Agendamentos
+  </div>
+
+  <div class="nav-item" style="opacity:.45; cursor:default;">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+      <circle cx="9" cy="7" r="4"/>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+    </svg>
+    Clientes
+  </div>
+
+  <div class="nav-item" style="opacity:.45; cursor:default;">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+    </svg>
+    Relatórios
+  </div>
+
+</nav>
+
+<!-- ─── MAIN ────────────────────────────────────────────── -->
+<main id="main">
+
+  <!-- Resultados de busca -->
+  <div id="search-results-section">
+    <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1rem">
+      Resultados para: <strong id="search-term-display" style="color:var(--accent)"></strong>
+    </p>
+    <div id="search-results-list"></div>
+  </div>
+
+  <!-- ─── SEÇÃO: GERAL ─────────────────────────────────── -->
+  <section class="section active" id="s-geral">
+
+    <div class="section-hero">
+      <div class="hero-tag">Tela Inicial</div>
+      <h1>Geral — Visão Geral do Sistema</h1>
+      <p>A tela Home apresenta um panorama completo dos agendamentos, com indicadores em tempo real, filtros avançados e múltiplos modos de visualização para análise rápida e ações diretas.</p>
+    </div>
+
+    <!-- ─── FILTROS ──────────────────────────── -->
+    <div class="content-block" id="filtros"
+      data-searchable
+      data-title="Filtros"
+      data-content="Filtros de agenda profissional tipo atividade atividade cliente tags indicadores atualizados automaticamente">
+
+      <h2>
+        <span class="block-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+          </svg>
+        </span>
+        Filtros
+      </h2>
+
+      <p>É possível aplicar filtros para visualizar dados específicos. Ao aplicar qualquer filtro, os indicadores de desempenho são atualizados automaticamente.</p>
+
+      <div class="section-subtitle">Tipos de filtro disponíveis</div>
+      <div class="filter-list">
+        <span class="tag">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Agenda
+        </span>
+        <span class="tag">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+          </svg>
+          Profissional
+        </span>
+        <span class="tag">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8"/>
+          </svg>
+          Tipo de Atividade
+        </span>
+        <span class="tag">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 11 12 14 22 4"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+          Atividade
+        </span>
+        <span class="tag">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          Cliente
+        </span>
+        <span class="tag">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+            <line x1="7" y1="7" x2="7.01" y2="7"/>
+          </svg>
+          Tags
+        </span>
+      </div>
+
+      <div class="callout callout-info">
+        <span class="callout-icon">👉</span>
+        <span>Ao aplicar filtros, os <strong>indicadores de desempenho são atualizados automaticamente</strong>, refletindo apenas os dados do período e critérios selecionados.</span>
+      </div>
+    </div>
+
+    <!-- ─── INDICADORES ──────────────────────── -->
+    <div class="content-block" id="indicadores"
+      data-searchable
+      data-title="Indicadores de Desempenho"
+      data-content="Indicadores total sala de espera pendentes agendados concluídos cancelados taxa confirmação status geral atividades populares clicáveis filtrar status">
+
+      <h2>
+        <span class="block-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+          </svg>
+        </span>
+        Indicadores de Desempenho
+      </h2>
+
+      <p>Os indicadores mostram a quantidade de agendamentos conforme os filtros aplicados, permitindo uma visão rápida do status geral.</p>
+
+      <div class="section-subtitle">Contadores de status</div>
+      <div class="indicator-grid">
+        <div class="indicator">
+          <span class="indicator-dot dot-total"></span>
+          <span class="indicator-label">Total</span>
+          <span class="indicator-count">—</span>
+        </div>
+        <div class="indicator">
+          <span class="indicator-dot dot-waiting"></span>
+          <span class="indicator-label">Sala de Espera</span>
+          <span class="indicator-count">—</span>
+        </div>
+        <div class="indicator">
+          <span class="indicator-dot dot-pending"></span>
+          <span class="indicator-label">Pendentes</span>
+          <span class="indicator-count">—</span>
+        </div>
+        <div class="indicator">
+          <span class="indicator-dot dot-booked"></span>
+          <span class="indicator-label">Agendados</span>
+          <span class="indicator-count">—</span>
+        </div>
+        <div class="indicator">
+          <span class="indicator-dot dot-done"></span>
+          <span class="indicator-label">Concluídos</span>
+          <span class="indicator-count">—</span>
+        </div>
+        <div class="indicator">
+          <span class="indicator-dot dot-canceled"></span>
+          <span class="indicator-label">Cancelados</span>
+          <span class="indicator-count">—</span>
+        </div>
+      </div>
+
+      <div class="callout callout-tip">
+        <span class="callout-icon">💡</span>
+        <span><strong>Dica:</strong> Os indicadores são <strong>clicáveis</strong>, permitindo filtrar rapidamente por um status específico.</span>
+      </div>
+
+      <div class="section-subtitle">Informações adicionais exibidas</div>
+      <div class="card-grid">
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3>Taxa de Confirmação</h3>
+          <p>Percentual de agendamentos confirmados em relação ao total no período filtrado.</p>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>Status Geral</h3>
+          <p>Visão consolidada da situação atual da agenda e distribuição dos agendamentos.</p>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h3>Atividades Populares</h3>
+          <p>Ranking das atividades com maior número de agendamentos no período selecionado.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── MODOS DE VISUALIZAÇÃO ────────────── -->
+    <div class="content-block" id="modos"
+      data-searchable
+      data-title="Modos de Visualização"
+      data-content="Modos visualização cards lista kanban semana mês agendamentos criar agendamento clicando dia">
+
+      <h2>
+        <span class="block-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+          </svg>
+        </span>
+        Modos de Visualização
+      </h2>
+
+      <p>Abaixo dos indicadores, você pode escolher entre <strong>5 formas</strong> de visualizar os agendamentos de acordo com sua preferência.</p>
+
+      <div class="section-subtitle">Formatos disponíveis</div>
+      <div class="view-modes">
+        <button class="view-mode-btn active">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="9" height="9"/><rect x="13" y="2" width="9" height="9"/>
+            <rect x="2" y="13" width="9" height="9"/><rect x="13" y="13" width="9" height="9"/>
+          </svg>
+          Cards
+        </button>
+        <button class="view-mode-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/>
+            <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>
+          </svg>
+          Lista
+        </button>
+        <button class="view-mode-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="5" height="18"/><rect x="10" y="3" width="5" height="18"/><rect x="17" y="3" width="5" height="18"/>
+          </svg>
+          Kanban
+        </button>
+        <button class="view-mode-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Semana
+        </button>
+        <button class="view-mode-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Mês
+        </button>
+      </div>
+
+      <div class="callout callout-info">
+        <span class="callout-icon">👉</span>
+        <span>Nos modos <strong>Semana</strong> e <strong>Mês</strong>, é possível criar novos agendamentos clicando diretamente no dia desejado no calendário.</span>
+      </div>
+
+      <div class="section-subtitle">Detalhes por modo</div>
+      <ol class="step-list">
+        <li><span><strong>Cards</strong> — Exibe cada agendamento como um cartão visual, ideal para visualização rápida com informações resumidas.</span></li>
+        <li><span><strong>Lista</strong> — Apresenta os agendamentos em linhas, facilitando a leitura de muitos registros de forma compacta.</span></li>
+        <li><span><strong>Kanban</strong> — Organiza os agendamentos em colunas por status, permitindo arrastar e reorganizar visualmente.</span></li>
+        <li><span><strong>Semana</strong> — Visualização em grade semanal. Clique em qualquer horário para criar um novo agendamento.</span></li>
+        <li><span><strong>Mês</strong> — Visão mensal com todos os agendamentos distribuídos por dia. Clique no dia para agendar.</span></li>
+      </ol>
+    </div>
+
+    <!-- ─── CRIAR AGENDAMENTOS ────────────────── -->
+    <div class="content-block" id="criar-agendamento"
+      data-searchable
+      data-title="Criar Agendamentos"
+      data-content="criar agendamento tela inicial home botão novo agendamento semana mês clique dia">
+
+      <h2>
+        <span class="block-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </span>
+        Criar Agendamentos
+      </h2>
+
+      <p>Além dos modos de visualização em calendário, também é possível realizar novos agendamentos diretamente pela tela inicial.</p>
+
+      <div class="quote-block">
+        A tela Geral funciona tanto como painel de análise quanto como ponto de criação rápida — sem precisar navegar para outra tela.
+      </div>
+
+      <div class="callout callout-tip">
+        <span class="callout-icon">💡</span>
+        <span>Nos modos <strong>Semana</strong> e <strong>Mês</strong>, basta clicar no dia desejado para iniciar um novo agendamento diretamente no calendário.</span>
+      </div>
+    </div>
+
+  </section>
+  <!-- /s-geral -->
+
+</main>
+
+<!-- Voltar ao topo -->
+<button id="back-to-top" title="Voltar ao topo">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
+
+<script src="main.js"></script>
+</body>
+</html>
