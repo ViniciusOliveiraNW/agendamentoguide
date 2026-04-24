@@ -86,6 +86,82 @@
   </div>
 
   <div class="nav-divider"></div>
+  <div class="nav-group-label">Configurações</div>
+
+  <div class="nav-item" data-section="s-agendas">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+      <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+    </svg>
+    Agendas
+  </div>
+
+  <div class="nav-item" data-section="s-tipos-atividade">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8"/>
+    </svg>
+    Tipos de Atividades
+  </div>
+
+  <div class="nav-item" data-section="s-atividades">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="9 11 12 14 22 4"/>
+      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+    </svg>
+    Atividades
+  </div>
+
+  <div class="nav-item" data-section="s-usuarios">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+      <circle cx="9" cy="7" r="4"/>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+    </svg>
+    Usuários
+  </div>
+
+  <div class="nav-item" data-section="s-feriados">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="10"/>
+      <line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+    </svg>
+    Feriados
+  </div>
+
+  <div class="nav-item" data-section="s-notif-config">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+      <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+    </svg>
+    Config. de Notificações
+  </div>
+
+  <div class="nav-item" data-section="s-notif-templates">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <polyline points="14 2 14 8 20 8"/>
+      <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+    </svg>
+    Templates de Notificações
+  </div>
+
+  <div class="nav-item" data-section="s-crm">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="2" y="3" width="20" height="14" rx="2"/>
+      <path d="M8 21h8M12 17v4"/>
+    </svg>
+    Gerenc. CRM x Atividades
+  </div>
+
+  <div class="nav-item" data-section="s-email-config">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <polyline points="22,6 12,13 2,6"/>
+    </svg>
+    Config. de Email
+  </div>
+
+  <div class="nav-divider"></div>
   <div class="nav-group-label">Em breve</div>
 
   <div class="nav-item" style="opacity:.45; cursor:default;">
@@ -149,7 +225,7 @@
         Filtros
       </h2>
 
-      <p>Podemos aplicar filtros para visualizar dados específicos.</p>
+      <p>Podemos aplicar filtros para visualizar dados específicos. Ao aplicar qualquer filtro, os indicadores de desempenho são atualizados automaticamente.</p>
 
       <div class="section-subtitle">Tipos de filtro disponíveis</div>
       <div class="filter-list">
@@ -225,7 +301,8 @@
           <span class="indicator-label">Total</span>
           <span class="indicator-count">—</span>
           <div class="indicator-detail">
-            <span><strong>A soma de todos os agendamentos em: Sala de espera, Pendentes, Agendados, Concluídos e Cancelados.</strong></span>
+            <span class="indicator-detail-icon">📊</span>
+            <span>A soma de todos os agendamentos em: Sala de espera, Pendentes, Agendados, Concluídos e Cancelados.</span>
           </div>
         </div>
 
@@ -234,7 +311,8 @@
           <span class="indicator-label">Sala de Espera</span>
           <span class="indicator-count">—</span>
           <div class="indicator-detail">
-            <span><strong>Clientes que optaram por aguardar o horário ficar vago.</strong></span>
+            <span class="indicator-detail-icon">⏳</span>
+            <span>Clientes que optaram por aguardar o horário ficar vago.</span>
           </div>
         </div>
 
@@ -243,7 +321,8 @@
           <span class="indicator-label">Pendentes</span>
           <span class="indicator-count">—</span>
           <div class="indicator-detail">
-            <span><strong>Agendamentos que ainda aguardam aprovação.</strong></span>
+            <span class="indicator-detail-icon">⏱️</span>
+            <span>Agendamentos que ainda aguardam aprovação.</span>
           </div>
         </div>
 
@@ -252,7 +331,8 @@
           <span class="indicator-label">Agendados</span>
           <span class="indicator-count">—</span>
           <div class="indicator-detail">
-            <span><strong>Agendamentos já confirmados e na agenda.</strong></span>
+            <span class="indicator-detail-icon">✅</span>
+            <span>Agendamentos já confirmados e na agenda.</span>
           </div>
         </div>
 
@@ -261,7 +341,8 @@
           <span class="indicator-label">Concluídos</span>
           <span class="indicator-count">—</span>
           <div class="indicator-detail">
-            <span><strong>Agendamentos finalizados com sucesso.</strong></span>
+            <span class="indicator-detail-icon">🎯</span>
+            <span>Agendamentos finalizados com sucesso.</span>
           </div>
         </div>
 
@@ -270,7 +351,8 @@
           <span class="indicator-label">Cancelados</span>
           <span class="indicator-count">—</span>
           <div class="indicator-detail">
-            <span><strong>Agendamentos que não puderam ser realizados.</strong></span>
+            <span class="indicator-detail-icon">❌</span>
+            <span>Agendamentos que não puderam ser realizados.</span>
           </div>
         </div>
 
@@ -413,6 +495,88 @@
 
   </section>
   <!-- /s-geral -->
+
+  <!-- ─── CONFIGURAÇÕES: placeholders ─────────────────── -->
+  <section class="section" id="s-agendas">
+    <div class="section-hero">
+      <div class="hero-tag">Configurações</div>
+      <h1>Agendas</h1>
+      <p>Gerencie as agendas disponíveis no sistema.</p>
+    </div>
+    <div class="content-block"><p style="color:var(--text-muted);font-size:.9rem">Conteúdo em construção.</p></div>
+  </section>
+
+  <section class="section" id="s-tipos-atividade">
+    <div class="section-hero">
+      <div class="hero-tag">Configurações</div>
+      <h1>Tipos de Atividades</h1>
+      <p>Defina e organize os tipos de atividade utilizados nos agendamentos.</p>
+    </div>
+    <div class="content-block"><p style="color:var(--text-muted);font-size:.9rem">Conteúdo em construção.</p></div>
+  </section>
+
+  <section class="section" id="s-atividades">
+    <div class="section-hero">
+      <div class="hero-tag">Configurações</div>
+      <h1>Atividades</h1>
+      <p>Cadastre e configure as atividades oferecidas.</p>
+    </div>
+    <div class="content-block"><p style="color:var(--text-muted);font-size:.9rem">Conteúdo em construção.</p></div>
+  </section>
+
+  <section class="section" id="s-usuarios">
+    <div class="section-hero">
+      <div class="hero-tag">Configurações</div>
+      <h1>Usuários</h1>
+      <p>Gerencie os usuários e permissões de acesso ao sistema.</p>
+    </div>
+    <div class="content-block"><p style="color:var(--text-muted);font-size:.9rem">Conteúdo em construção.</p></div>
+  </section>
+
+  <section class="section" id="s-feriados">
+    <div class="section-hero">
+      <div class="hero-tag">Configurações</div>
+      <h1>Feriados</h1>
+      <p>Configure os feriados que afetam a disponibilidade das agendas.</p>
+    </div>
+    <div class="content-block"><p style="color:var(--text-muted);font-size:.9rem">Conteúdo em construção.</p></div>
+  </section>
+
+  <section class="section" id="s-notif-config">
+    <div class="section-hero">
+      <div class="hero-tag">Configurações</div>
+      <h1>Configurações de Notificações</h1>
+      <p>Defina regras e comportamentos das notificações do sistema.</p>
+    </div>
+    <div class="content-block"><p style="color:var(--text-muted);font-size:.9rem">Conteúdo em construção.</p></div>
+  </section>
+
+  <section class="section" id="s-notif-templates">
+    <div class="section-hero">
+      <div class="hero-tag">Configurações</div>
+      <h1>Templates de Notificações</h1>
+      <p>Crie e edite os modelos de mensagens enviadas automaticamente.</p>
+    </div>
+    <div class="content-block"><p style="color:var(--text-muted);font-size:.9rem">Conteúdo em construção.</p></div>
+  </section>
+
+  <section class="section" id="s-crm">
+    <div class="section-hero">
+      <div class="hero-tag">Configurações</div>
+      <h1>Gerenciamento de Serviços CRM × Atividades</h1>
+      <p>Vincule serviços do CRM às atividades do módulo de agendamento.</p>
+    </div>
+    <div class="content-block"><p style="color:var(--text-muted);font-size:.9rem">Conteúdo em construção.</p></div>
+  </section>
+
+  <section class="section" id="s-email-config">
+    <div class="section-hero">
+      <div class="hero-tag">Configurações</div>
+      <h1>Configurações de Email</h1>
+      <p>Configure o servidor e os parâmetros de envio de e-mails do sistema.</p>
+    </div>
+    <div class="content-block"><p style="color:var(--text-muted);font-size:.9rem">Conteúdo em construção.</p></div>
+  </section>
 
 </main>
 
