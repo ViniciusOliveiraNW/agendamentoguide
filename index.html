@@ -359,7 +359,6 @@
       </div>
 
       <div class="callout callout-tip">
-        <span class="callout-icon">💡</span>
         <span><strong>Dica:</strong> No sistema, os indicadores são <strong>clicáveis</strong>, permitindo filtrar rapidamente por um status específico.</span>
       </div>
 
@@ -452,7 +451,6 @@
       </div>
 
       <div class="callout callout-info">
-        <span class="callout-icon">👉</span>
         <span>Nos modos <strong>Semana</strong> e <strong>Mês</strong>, é possível criar novos agendamentos clicando diretamente no dia desejado no calendário.</span>
       </div>
 
@@ -488,7 +486,6 @@
       </div>
 
       <div class="callout callout-tip">
-        <span class="callout-icon">💡</span>
         <span>Nos modos <strong>Semana</strong> e <strong>Mês</strong>, basta clicar no dia desejado para iniciar um novo agendamento diretamente no calendário.</span>
       </div>
     </div>
@@ -498,21 +495,277 @@
 
   <!-- ─── CONFIGURAÇÕES: placeholders ─────────────────── -->
   <section class="section" id="s-agendas">
+
     <div class="section-hero">
       <div class="hero-tag">Configurações</div>
       <h1>Agendas</h1>
-      <p>Gerencie as agendas disponíveis no sistema.</p>
+      <p>Crie e gerencie agendas separadas para organizar sua rotina de trabalho com total flexibilidade.</p>
     </div>
-    <div class="content-block"><p style="color:var(--text-muted);font-size:.9rem">Conteúdo em construção.</p></div>
+
+    <!-- Visão geral -->
+    <div class="content-block"
+      data-searchable
+      data-title="Agendas — Visão Geral"
+      data-content="agendas criar gerenciar agenda geral padrão auto-agendamento personalizada">
+
+      <h2>
+        <span class="block-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </span>
+        Visão Geral
+      </h2>
+
+      <p>A seção de Agendas permite criar e gerenciar agendas separadamente, cada uma com seus próprios horários e departamentos vinculados.</p>
+
+      <div class="quote-block">
+        Por padrão, o sistema já conta com uma <strong>Agenda Geral</strong> — criada para auxiliar nas primeiras configurações. A partir dela, você pode criar agendas personalizadas para a sua rotina de trabalho.
+      </div>
+
+      <div class="callout callout-tip">
+        <span>A <strong>Agenda Geral</strong> não pode ser excluída — apenas seus horários podem ser editados.</span>
+      </div>
+
+    </div>
+
+    <!-- Criando uma agenda -->
+    <div class="content-block"
+      data-searchable
+      data-title="Agendas — Criar Agenda"
+      data-content="criar agenda adicionar nome horário início fim departamentos ativo inativo status">
+
+      <h2>
+        <span class="block-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </span>
+        Criando uma Agenda
+      </h2>
+
+      <p>Para criar uma nova agenda, clique em <strong>Adicionar</strong> e preencha os campos abaixo:</p>
+
+      <div class="section-subtitle">Campos obrigatórios</div>
+      <div class="card-grid">
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+            </svg>
+          </div>
+          <h3>Nome</h3>
+          <p>Identificação da agenda. Ex: <em>Agenda Dr. João</em>.</p>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 8 14"/>
+            </svg>
+          </div>
+          <h3>Horário de Início</h3>
+          <p>Hora em que a agenda começa a aceitar agendamentos.</p>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>Horário de Fim</h3>
+          <p>Hora em que a agenda se encerra.</p>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Departamentos</h3>
+          <p>Selecione quais departamentos terão acesso a essa agenda.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-info">
+        <span>Ao lado do nome da agenda, você pode definir se ela estará <strong>ativa</strong> ou <strong>inativa</strong>.</span>
+      </div>
+
+    </div>
+
+    <!-- Filtros -->
+    <div class="content-block"
+      data-searchable
+      data-title="Agendas — Filtros"
+      data-content="filtrar agendas nome status ativo inativo busca">
+
+      <h2>
+        <span class="block-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+          </svg>
+        </span>
+        Filtros
+      </h2>
+
+      <p>É possível filtrar a listagem de agendas por dois critérios:</p>
+
+      <div class="filter-list">
+        <span class="tag">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+          </svg>
+          Nome
+        </span>
+        <span class="tag">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          Status (ativo / inativo)
+        </span>
+      </div>
+
+    </div>
+
+    <!-- Lógica de agenda padrão -->
+    <div class="content-block"
+      data-searchable
+      data-title="Agendas — Agenda Padrão"
+      data-content="agenda padrão geral auto-agendamento painel três pontinhos definir trocar">
+
+      <h2>
+        <span class="block-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </span>
+        Lógica da Agenda Padrão
+      </h2>
+
+      <p>A <strong>Agenda Geral</strong> vem definida como <strong>Padrão</strong> por padrão do sistema. Isso tem dois efeitos diretos:</p>
+
+      <ol class="step-list">
+        <li><span>É a <strong>primeira agenda exibida</strong> ao abrir o painel Geral.</span></li>
+        <li><span>É a agenda utilizada no <strong>auto-agendamento</strong>.</span></li>
+      </ol>
+
+      <div class="callout callout-tip">
+
+        <span>Você pode definir qualquer outra agenda como padrão clicando nos <strong>três pontinhos (⋯)</strong> ao lado da agenda desejada.</span>
+      </div>
+
+    </div>
+
   </section>
 
   <section class="section" id="s-tipos-atividade">
+
     <div class="section-hero">
       <div class="hero-tag">Configurações</div>
       <h1>Tipos de Atividades</h1>
-      <p>Defina e organize os tipos de atividade utilizados nos agendamentos.</p>
+      <p>Categorias criadas pelo usuário para organizar e identificar atividades, auxiliando na análise e nos relatórios.</p>
     </div>
-    <div class="content-block"><p style="color:var(--text-muted);font-size:.9rem">Conteúdo em construção.</p></div>
+
+    <!-- Visão geral -->
+    <div class="content-block"
+      data-searchable
+      data-title="Tipos de Atividades — Visão Geral"
+      data-content="tipos atividades categorias organizar identificar análise relatórios">
+
+      <h2>
+        <span class="block-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8"/>
+          </svg>
+        </span>
+        Visão Geral
+      </h2>
+
+      <p>Os tipos de atividades funcionam como <strong>categorias</strong> que você cria para organizar e identificar suas atividades. Eles facilitam a análise do fluxo de trabalho e a geração de relatórios segmentados.</p>
+
+    </div>
+
+    <!-- Criando um tipo -->
+    <div class="content-block"
+      data-searchable
+      data-title="Tipos de Atividades — Criar Tipo"
+      data-content="criar tipo atividade nome descrição autoagendamento atendimento automático canal notificação departamento ativo">
+
+      <h2>
+        <span class="block-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </span>
+        Criando um Tipo de Atividade
+      </h2>
+
+      <p>A criação é simples. Preencha os campos abaixo e configure as opções de comportamento:</p>
+
+      <div class="section-subtitle">Campos básicos</div>
+      <div class="card-grid">
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+            </svg>
+          </div>
+          <h3>Nome</h3>
+          <p>Identificação do tipo. Ex: <em>Barbearia</em>.</p>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
+              <line x1="8" y1="18" x2="21" y2="18"/>
+              <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>
+            </svg>
+          </div>
+          <h3>Descrição</h3>
+          <p>Detalhe o propósito do tipo. Ex: <em>Atividades para salões de barbeiro</em>.</p>
+        </div>
+      </div>
+
+      <div class="section-subtitle">Opções de comportamento</div>
+
+      <div class="info-card" style="margin-bottom:.75rem">
+        <div class="card-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <h3>Aparecer no Autoagendamento</h3>
+        <p>Permite que este tipo de atividade seja exibido e agendado diretamente pelo próprio cliente, sem intervenção manual.</p>
+      </div>
+
+      <div class="info-card" style="margin-bottom:1.25rem">
+        <div class="card-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 11 12 14 22 4"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+        </div>
+        <h3>Criar Atendimento Automaticamente</h3>
+        <p>Gera um atendimento assim que o cliente realizar o autoagendamento. Ao ativar essa opção, dois campos adicionais se tornam obrigatórios:</p>
+      </div>
+
+      <div class="callout callout-info" style="margin-bottom:.6rem">
+        <span><strong>Canal de notificação padrão</strong> — Número ou e-mail associado ao atendimento gerado automaticamente.</span>
+      </div>
+
+      <div class="callout callout-info">
+        <span><strong>Departamento do atendimento</strong> — Selecione entre os departamentos cadastrados na plataforma para receber esse atendimento.</span>
+      </div>
+
+      <div class="callout callout-tip" style="margin-top:1rem">
+        <span>Assim como nas agendas, você também define se o tipo de atividade estará <strong>ativo</strong> ou <strong>inativo</strong>.</span>
+      </div>
+
+    </div>
+
   </section>
 
   <section class="section" id="s-atividades">
