@@ -579,6 +579,55 @@ body {
 .dot-done     { background: #22c55e; }
 .dot-canceled { background: #ef4444; }
 
+/* Grade 3×2 fixa para os contadores de status */
+.indicator-grid-3x2 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 600px) {
+  .indicator-grid-3x2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ─── Indicator Detail (expansível ao clicar) ────────────── */
+.indicator {
+  position: relative;
+}
+.indicator.open {
+  border-color: var(--border-active);
+  box-shadow: var(--shadow-md);
+}
+.indicator-detail {
+  display: none;
+  margin-top: .75rem;
+  padding-top: .65rem;
+  border-top: 1px solid var(--border);
+  text-align: left;
+  font-size: .78rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  gap: .45rem;
+  align-items: flex-start;
+}
+.indicator.open .indicator-detail {
+  display: flex;
+}
+.indicator-detail-icon {
+  flex-shrink: 0;
+  font-size: .95rem;
+  margin-top: .05rem;
+}
+.indicator-detail strong {
+  color: var(--text-primary);
+}
+/* Indicadores extras (taxa, status, populares) */
+.indicator-extra .indicator-count {
+  font-size: 1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.8rem;
+}
+
 /* ─── View Mode Buttons ──────────────────────────────────── */
 .view-modes {
   display: flex; flex-wrap: wrap; gap: .5rem;

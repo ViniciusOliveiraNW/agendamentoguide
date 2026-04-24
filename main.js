@@ -150,6 +150,17 @@ document.addEventListener('keydown', e => {
   }
 });
 
+// ─── Indicadores — toggle de detalhe ao clicar ───────────
+document.querySelectorAll('.indicator[data-detail]').forEach(ind => {
+  ind.addEventListener('click', () => {
+    const isOpen = ind.classList.contains('open');
+    // Fecha todos os outros
+    document.querySelectorAll('.indicator.open').forEach(o => o.classList.remove('open'));
+    // Abre o clicado (se não estava aberto)
+    if (!isOpen) ind.classList.add('open');
+  });
+});
+
 // ─── Voltar ao topo ───────────────────────────────────────
 const mainEl = document.getElementById('main');
 const btt    = document.getElementById('back-to-top');

@@ -215,89 +215,70 @@
         Indicadores de Desempenho
       </h2>
 
-      <p>Os indicadores mostram a quantidade de agendamentos conforme os filtros aplicados:</p>
-
-      <ul class="info-list">
-        <li>
-          <span class="info-list-icon">📊</span>
-          <span><strong>Total</strong> — A soma de agendamentos em: Sala de espera, Pendentes, Agendados, Concluídas e Canceladas</span>
-        </li>
-        <li>
-          <span class="info-list-icon">⏳</span>
-          <span><strong>Sala de espera</strong> — Clientes que optaram por esperar o horário ficar vago</span>
-        </li>
-        <li>
-          <span class="info-list-icon">⏱️</span>
-          <span><strong>Pendentes</strong> — Agendamentos aguardando aprovação</span>
-        </li>
-        <li>
-          <span class="info-list-icon">✅</span>
-          <span><strong>Agendados</strong> — Agendamentos já confirmados</span>
-        </li>
-        <li>
-          <span class="info-list-icon">🎯</span>
-          <span><strong>Concluídos</strong> — Agendamento concluído com sucesso</span>
-        </li>
-        <li>
-          <span class="info-list-icon">❌</span>
-          <span><strong>Cancelados</strong> — Tarefas que não puderam ser realizadas</span>
-        </li>
-      </ul>
-
-      <div class="section-subtitle">Informações adicionais</div>
-
-      <ul class="info-list">
-        <li>
-          <span class="info-list-icon">📈</span>
-          <span><strong>Taxa de confirmação</strong> — Porcentagem baseada em agendamentos <strong>sala de espera</strong> e <strong>concluídos</strong> sobre o total</span>
-        </li>
-        <li>
-          <span class="info-list-icon">📋</span>
-          <span><strong>Status geral</strong> — Gráficos de porcentagem de cada categoria</span>
-        </li>
-        <li>
-          <span class="info-list-icon">🏆</span>
-          <span><strong>Atividades mais populares</strong> — Qual serviço é agendado com uma maior recorrência</span>
-        </li>
-      </ul>
+      <p>Os indicadores mostram a quantidade de agendamentos conforme os filtros aplicados. <strong>Clique em qualquer contador</strong> para ver sua descrição.</p>
 
       <div class="section-subtitle">Contadores de status</div>
-      <div class="indicator-grid">
-        <div class="indicator">
+      <div class="indicator-grid indicator-grid-3x2">
+
+        <div class="indicator" data-detail="A soma de todos os agendamentos em: Sala de espera, Pendentes, Agendados, Concluídos e Cancelados.">
           <span class="indicator-dot dot-total"></span>
           <span class="indicator-label">Total</span>
           <span class="indicator-count">—</span>
+          <div class="indicator-detail">
+            <span><strong>A soma de todos os agendamentos em: Sala de espera, Pendentes, Agendados, Concluídos e Cancelados.</strong></span>
+          </div>
         </div>
-        <div class="indicator">
+
+        <div class="indicator" data-detail="Clientes que optaram por aguardar o horário ficar vago.">
           <span class="indicator-dot dot-waiting"></span>
           <span class="indicator-label">Sala de Espera</span>
           <span class="indicator-count">—</span>
+          <div class="indicator-detail">
+            <span><strong>Clientes que optaram por aguardar o horário ficar vago.</strong></span>
+          </div>
         </div>
-        <div class="indicator">
+
+        <div class="indicator" data-detail="Agendamentos que ainda aguardam aprovação.">
           <span class="indicator-dot dot-pending"></span>
           <span class="indicator-label">Pendentes</span>
           <span class="indicator-count">—</span>
+          <div class="indicator-detail">
+            <span><strong>Agendamentos que ainda aguardam aprovação.</strong></span>
+          </div>
         </div>
-        <div class="indicator">
+
+        <div class="indicator" data-detail="Agendamentos já confirmados e na agenda.">
           <span class="indicator-dot dot-booked"></span>
           <span class="indicator-label">Agendados</span>
           <span class="indicator-count">—</span>
+          <div class="indicator-detail">
+            <span><strong>Agendamentos já confirmados e na agenda.</strong></span>
+          </div>
         </div>
-        <div class="indicator">
+
+        <div class="indicator" data-detail="Agendamentos finalizados com sucesso.">
           <span class="indicator-dot dot-done"></span>
           <span class="indicator-label">Concluídos</span>
           <span class="indicator-count">—</span>
+          <div class="indicator-detail">
+            <span><strong>Agendamentos finalizados com sucesso.</strong></span>
+          </div>
         </div>
-        <div class="indicator">
+
+        <div class="indicator" data-detail="Agendamentos que não puderam ser realizados.">
           <span class="indicator-dot dot-canceled"></span>
           <span class="indicator-label">Cancelados</span>
           <span class="indicator-count">—</span>
+          <div class="indicator-detail">
+            <span><strong>Agendamentos que não puderam ser realizados.</strong></span>
+          </div>
         </div>
+
       </div>
 
       <div class="callout callout-tip">
         <span class="callout-icon">💡</span>
-        <span><strong>Dica:</strong> Os indicadores são <strong>clicáveis</strong>, permitindo filtrar rapidamente por um status específico.</span>
+        <span><strong>Dica:</strong> No sistema, os indicadores são <strong>clicáveis</strong>, permitindo filtrar rapidamente por um status específico.</span>
       </div>
 
       <div class="section-subtitle">Informações adicionais exibidas</div>
@@ -309,7 +290,7 @@
             </svg>
           </div>
           <h3>Taxa de Confirmação</h3>
-          <p>Percentual de agendamentos confirmados em relação ao total no período filtrado.</p>
+          <p>Porcentagem baseada em agendamentos de <strong>sala de espera</strong> e <strong>concluídos</strong> sobre o total.</p>
         </div>
         <div class="info-card">
           <div class="card-icon">
@@ -318,7 +299,7 @@
             </svg>
           </div>
           <h3>Status Geral</h3>
-          <p>Visão consolidada da situação atual da agenda e distribuição dos agendamentos.</p>
+          <p>Gráficos de porcentagem de cada categoria de status de agendamento.</p>
         </div>
         <div class="info-card">
           <div class="card-icon">
@@ -327,9 +308,10 @@
             </svg>
           </div>
           <h3>Atividades Populares</h3>
-          <p>Ranking das atividades com maior número de agendamentos no período selecionado.</p>
+          <p>Qual serviço é agendado com maior recorrência no período selecionado.</p>
         </div>
       </div>
+
     </div>
 
     <!-- ─── MODOS DE VISUALIZAÇÃO ────────────── -->
