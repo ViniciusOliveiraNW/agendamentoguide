@@ -173,9 +173,13 @@ body {
 
 #hamburger {
   width: 36px; height: 36px;
-  display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+  display: none;
+  flex-direction: column; justify-content: center; align-items: center; gap: 5px;
   border-radius: var(--radius-sm);
   transition: background var(--trans);
+}
+@media (max-width: 720px) {
+  #hamburger { display: flex; }
 }
 #hamburger:hover { background: var(--bg-hover); }
 #hamburger span {
