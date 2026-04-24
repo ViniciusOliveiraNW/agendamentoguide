@@ -301,7 +301,6 @@
           <span class="indicator-label">Total</span>
           <span class="indicator-count">—</span>
           <div class="indicator-detail">
-            <span class="indicator-detail-icon">📊</span>
             <span>A soma de todos os agendamentos em: Sala de espera, Pendentes, Agendados, Concluídos e Cancelados.</span>
           </div>
         </div>
@@ -311,7 +310,6 @@
           <span class="indicator-label">Sala de Espera</span>
           <span class="indicator-count">—</span>
           <div class="indicator-detail">
-            <span class="indicator-detail-icon">⏳</span>
             <span>Clientes que optaram por aguardar o horário ficar vago.</span>
           </div>
         </div>
@@ -321,7 +319,6 @@
           <span class="indicator-label">Pendentes</span>
           <span class="indicator-count">—</span>
           <div class="indicator-detail">
-            <span class="indicator-detail-icon">⏱️</span>
             <span>Agendamentos que ainda aguardam aprovação.</span>
           </div>
         </div>
@@ -331,7 +328,6 @@
           <span class="indicator-label">Agendados</span>
           <span class="indicator-count">—</span>
           <div class="indicator-detail">
-            <span class="indicator-detail-icon">✅</span>
             <span>Agendamentos já confirmados e na agenda.</span>
           </div>
         </div>
@@ -341,7 +337,6 @@
           <span class="indicator-label">Concluídos</span>
           <span class="indicator-count">—</span>
           <div class="indicator-detail">
-            <span class="indicator-detail-icon">🎯</span>
             <span>Agendamentos finalizados com sucesso.</span>
           </div>
         </div>
@@ -351,7 +346,6 @@
           <span class="indicator-label">Cancelados</span>
           <span class="indicator-count">—</span>
           <div class="indicator-detail">
-            <span class="indicator-detail-icon">❌</span>
             <span>Agendamentos que não puderam ser realizados.</span>
           </div>
         </div>
@@ -652,7 +646,6 @@
       </ol>
 
       <div class="callout callout-tip">
-
         <span>Você pode definir qualquer outra agenda como padrão clicando nos <strong>três pontinhos (⋯)</strong> ao lado da agenda desejada.</span>
       </div>
 
@@ -769,12 +762,222 @@
   </section>
 
   <section class="section" id="s-atividades">
+
     <div class="section-hero">
       <div class="hero-tag">Configurações</div>
       <h1>Atividades</h1>
-      <p>Cadastre e configure as atividades oferecidas.</p>
+      <p>Registros que definem o que será realizado no agendamento, com suas características e comportamentos específicos.</p>
     </div>
-    <div class="content-block"><p style="color:var(--text-muted);font-size:.9rem">Conteúdo em construção.</p></div>
+
+    <!-- Filtros -->
+    <div class="content-block"
+      data-searchable
+      data-title="Atividades — Filtros"
+      data-content="filtros atividades nome tipo atividade status busca">
+
+      <h2>
+        <span class="block-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+          </svg>
+        </span>
+        Filtros
+      </h2>
+
+      <p>A listagem de atividades pode ser filtrada por três critérios:</p>
+
+      <div class="filter-list">
+        <span class="tag">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+          </svg>
+          Nome
+        </span>
+        <span class="tag">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8"/>
+          </svg>
+          Tipo de Atividade
+        </span>
+        <span class="tag">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          Status
+        </span>
+      </div>
+
+    </div>
+
+    <!-- Campos básicos -->
+    <div class="content-block"
+      data-searchable
+      data-title="Atividades — Criar Atividade"
+      data-content="criar atividade nome tipo duração minutos sem duração descrição adicionar">
+
+      <h2>
+        <span class="block-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </span>
+        Criando uma Atividade
+      </h2>
+
+      <p>Clique em <strong>Adicionar</strong> e preencha os campos abaixo:</p>
+
+      <div class="section-subtitle">Campos básicos</div>
+      <div class="card-grid">
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+            </svg>
+          </div>
+          <h3>Nome</h3>
+          <p>Identificação da atividade. Ex: <em>Corte e Barba</em>.</p>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8"/>
+            </svg>
+          </div>
+          <h3>Tipo de Atividade</h3>
+          <p>Categoria à qual essa atividade pertence. Ex: <em>Barbearia</em>.</p>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>Duração</h3>
+          <p>Tempo em minutos da atividade. Máximo de <strong>480 min (8h)</strong>. Para atividades mais longas, marque como <strong>Sem Duração</strong>.</p>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
+              <line x1="8" y1="18" x2="21" y2="18"/>
+              <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>
+            </svg>
+          </div>
+          <h3>Descrição</h3>
+          <p>Detalhe o que a atividade envolve. Ex: <em>Corte completo mais barba</em>.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Configurações de comportamento -->
+    <div class="content-block"
+      data-searchable
+      data-title="Atividades — Configurações"
+      data-content="configurações ativo inativo cliente CRM card ticket atendimento autoagendamento aprovação automática canal notificação departamento tags MegaZap">
+
+      <h2>
+        <span class="block-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+        </span>
+        Configurações de Comportamento
+      </h2>
+
+      <p>Estas opções controlam como a atividade se comporta durante o processo de agendamento:</p>
+
+      <div class="section-subtitle">Controles gerais</div>
+      <div class="card-grid">
+
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <h3>Ativo / Inativo</h3>
+          <p>Define se a atividade está disponível para ser utilizada nos agendamentos.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            </svg>
+          </div>
+          <h3>Cliente CRM</h3>
+          <p>Torna obrigatória a seleção de um cliente do CRM no MegaZap ao atribuir essa atividade.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <h3>Card do CRM</h3>
+          <p>Torna obrigatória a seleção de um Card do CRM no MegaZap ao atribuir essa atividade.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+          </div>
+          <h3>Ticket de Atendimento</h3>
+          <p>Torna obrigatória a seleção de um protocolo de atendimento ao usar essa atividade.</p>
+        </div>
+
+      </div>
+
+      <div class="section-subtitle">Autoagendamento</div>
+
+      <div class="info-card" style="margin-bottom:.75rem">
+        <div class="card-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <h3>Aparecer no Autoagendamento</h3>
+        <p>Permite que essa atividade seja exibida e agendada diretamente pelo cliente. Ao habilitar, duas sub-opções ficam disponíveis:</p>
+      </div>
+
+      <ol class="step-list" style="margin-bottom:1.25rem">
+        <li>
+          <span><strong>Aprovação automática</strong> — Confirma o agendamento automaticamente, sem necessidade de revisão manual.</span>
+        </li>
+        <li>
+          <span><strong>Criar atendimento automaticamente</strong> — Gera um protocolo de atendimento assim que o cliente realiza o autoagendamento. Requer a definição de:</span>
+        </li>
+      </ol>
+
+      <div class="callout callout-info" style="margin-bottom:.6rem">
+        <span><strong>Canal de notificação padrão</strong> — Número ou e-mail associado ao atendimento gerado automaticamente.</span>
+      </div>
+
+      <div class="callout callout-info" style="margin-bottom:1.5rem">
+        <span><strong>Departamento do atendimento</strong> — Selecione entre os departamentos cadastrados na plataforma para receber esse atendimento.</span>
+      </div>
+
+      <div class="section-subtitle">Tags</div>
+
+      <div class="info-card">
+        <div class="card-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+            <line x1="7" y1="7" x2="7.01" y2="7"/>
+          </svg>
+        </div>
+        <h3>Tags</h3>
+        <p>Selecione entre as tags cadastradas no MegaZap quais poderão ser vinculadas ao agendamento no momento da criação. Isso permite maior versatilidade ao aplicar filtros na tela <strong>Geral</strong>.</p>
+      </div>
+
+    </div>
+
   </section>
 
   <section class="section" id="s-usuarios">
