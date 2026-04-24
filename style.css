@@ -614,6 +614,7 @@ body {
 }
 .indicator-detail {
   display: none;
+  flex-direction: column;
   margin-top: .75rem;
   padding-top: .65rem;
   border-top: 1px solid var(--border);
@@ -634,6 +635,37 @@ body {
 }
 .indicator-detail strong {
   color: var(--text-primary);
+}
+.indicator-detail .callout {
+  margin: .25rem 0 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ─── Indicator Accordion Header (recorrência) ───────────── */
+.indicator-header {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.indicator-icon {
+  width: 32px; height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.indicator-header > div:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+.indicator-chevron {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  transition: transform var(--trans);
+  margin-left: auto;
+}
+.indicator.open .indicator-chevron {
+  transform: rotate(180deg);
 }
 /* Indicadores extras (taxa, status, populares) */
 .indicator-extra .indicator-count {
